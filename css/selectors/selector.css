@@ -1,0 +1,42 @@
+*{
+    background-color: lightcyan;
+}
+
+/* Tag Selector */
+h2{
+    text-align: center;
+    color: lightskyblue;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Id Selector */
+#python{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: purple;
+    text-align: center;
+}
+
+/* Class Selector */
+.cls{
+    color: red;
+    font-weight: bolder;
+}
+
+/* Grouping Selector */
+h3,h4{
+    color: aqua;
+    text-align: center;
+    font-style: italic;
+}
+
+/* Pseudo Class Selector */
+h1:hover{
+    color: blue;
+    background-color: cyan;
+}
+
+/* Pseudo Element Selector */
+p::first-line{
+    background-color: cyan;
+    color: blue;
+}

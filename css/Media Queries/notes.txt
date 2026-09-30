@@ -1,0 +1,1 @@
+Media Queries are the things that help to acheive the responsive design, the classes used help me view the page much ui friendy in each screens.

@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Task Form</title>
+  </head>
+  <body>
+    <h2>Student Registration Form</h2>
+    <form action="">
+      <table border="1px" cellpadding="10px" cellspacing="0" width="90%">
+        <td>
+          <h4>Personal Details</h4>
+          <label for="name">Full Name: </label>
+          <input type="text" id="name" />
+          <br /><br />
+          <label for="email">Email: </label>
+          <input type="email" id="email" />
+          <br /><br />
+          <label for="phone">Phone: </label>
+          <input type="tel" id="phone" placeholder="10 digit number" />
+          <br /><br />
+          <label for="dob">Date of Birth: </label>
+          <input type="date" id="dob" />
+          <br /><br />
+        </td>
+      </table>
+
+      <br />
+
+      <table border="1px" cellpadding="10px" cellspacing="0" width="90%">
+        <h4>Course Details</h4>
+        <label for="courses">Select Course: </label>
+        <select name="courses" id="courses">
+          <option value="" selected hidden>Choose a Course</option>
+          <option value="">MEARN</option>
+          <option value="">Data Science</option>
+          <option value="">Spring Boot</option>
+        </select>
+        <br /><br />
+
+        <label for="mode">Study Mode: </label>
+        <input type="radio" name="mode" id="online" />
+        <label for="online">Online</label>
+        <input type="radio" name="mode" id="offline" />
+        <label for="offline">Offline</label>
+        <input type="radio" name="mode" id="hybrid" />
+        <label for="hybrid">Hybrid</label>
+        <br /><br />
+
+        <label for="time">Preffered Batch Timing: </label>
+        <input type="checkbox" name="time" id="morning" />
+        <label for="morning">Morning</label>
+        <input type="checkbox" name="time" id="afternoon" />
+        <label for="afternoon">Afternoon</label>
+        <input type="checkbox" name="time" id="evening" />
+        <label for="evening">Evening</label>
+        <br /><br /><br />
+      </table>
+
+      <label for="upload">Upload ID Proof: </label>
+      <input type="file" id="upload" /><br /><br />
+      <label for="adddress">Address: </label><br />
+      <textarea id="address" cols="40" rows="5"></textarea>
+      <br /><br />
+
+      <input type="submit" />
+      <input type="reset" />
+    </form>
+  </body>
+</html>
