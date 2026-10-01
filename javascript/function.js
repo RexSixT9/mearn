@@ -106,3 +106,39 @@
 // days(week);
 
 // Function Hoisting: In JavaScript, function declarations are hoisted to the top of their containing scope. This means that you can call a function before it is defined in the code. However, function expressions and arrow functions are not hoisted in the same way, so they must be defined before they are called.
+
+// sayHello();
+// function sayHello() {
+//   console.log("Hello");
+// }
+
+// Function Closures: A closure is a function that has access to its own scope, the outer function's scope, and the global scope. Closures are often used to create private variables or functions that can only be accessed within a specific context.
+
+// function outerFn() {
+//   let counter = 0;
+//   function innerFn() {
+//     counter++;
+//     console.log(counter);
+//   }
+//   return innerFn;
+// }
+
+// const counter = outerFn();
+// counter();
+// counter();
+// counter();
+
+// Lexical Scope: Lexical scope refers to the fact that in JavaScript, the accessibility of variables is determined by their physical placement in the source code. Functions can access variables from their own scope, as well as from the scopes of their parent functions.
+
+// function outer() {
+//   let outerVar = "I am from outer function";
+//   function inner() {
+//     console.log(outerVar);
+//   }
+//   inner();
+// }
+// outer();
+
+// Pure Functions: A pure function is a function that, given the same input, will always return the same output and does not have any side effects (i.e., it does not modify any external state or variables). Pure functions are predictable and easier to test.
+
+// Functional Currying: Currying is a technique in functional programming where a function with multiple arguments is transformed into a sequence of functions, each taking a single argument. This allows for partial application of functions and can lead to more reusable and composable code.
