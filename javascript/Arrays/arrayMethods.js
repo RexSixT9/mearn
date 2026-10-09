@@ -222,3 +222,11 @@
 // Array.from(str)
 //   .filter((s) => vowels.includes(s))
 //   .forEach((item) => console.log(item));
+// if (dist in output) {
+//     let newTemp = output[dist];
+//     if (oldTemp > newTemp) {
+//       output[dist] = oldTemp;
+//     }
+//   } else {
+//     output[dist] = oldTemp;
+//   }
