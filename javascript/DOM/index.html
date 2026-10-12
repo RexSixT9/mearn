@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOM MANIPULATION</title>
+  </head>
+  <body>
+    <h1 id="head">DOM MANIPULATION</h1>
+
+    <ul>
+      <li>getElementById()</li>
+      <li class="cls">getElementByTagName()</li>
+      <li class="cls">getElementByClassName()</li>
+      <li>querySelector()</li>
+      <li>querySelectorAll()</li>
+    </ul>
+
+    <button class="btn" onclick="btnClick()">Submit</button>
+
+    <script>
+      //   const documentId = document.getElementById("head");
+      //   documentId.style.color = "blue";
+
+      //   const documentCls = document.getElementsByClassName("cls");
+      //   console.log(Array.from(documentCls));
+      //   console.log(Array.from(documentCls).map((i) => (i.style.color = "red")));
+
+      //   const documentTag = document.getElementsByTagName("li");
+      //   const listItems = Array.from(documentTag);
+      //   console.log(listItems);
+      //   console.log(listItems.map((i) => (i.style.color = "green")));
+
+      //   const query = document.querySelector("li");
+      //   console.log(query);
+      //   const queryId = document.querySelector("#head");
+      //   console.log(queryId);
+      //   const queryAll = document.querySelectorAll("li");
+      //   console.log(queryAll);
+      //   const queryCls = document.querySelectorAll(".cls");
+      //   console.log(queryCls);
+
+      const queryBtn = document.querySelector(".btn");
+      console.log(queryBtn);
+
+      function btnClick(){
+        alert("Button Clicked");
+      }
+      
+    </script>
+  </body>
+</html>
