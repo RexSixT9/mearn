@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body bgcolor="skyblue">
+    <div
+      class="card"
+      style="
+        width: 18rem;
+        margin: 5rem auto;
+        text-align: center;
+        padding: 25px;
+        border: 1px solid black;
+        border-radius: 5px;
+        background-color: #f9f9f9;
+      "
+    >
+      <h1>Age Checker</h1>
+      <input
+        type="number"
+        id="age-value"
+        style="
+          width: 100%;
+          padding: 10px;
+          border: 1px solid #ccc;
+          border-radius: 5px;
+          box-sizing: border-box;
+          margin-bottom: 20px;
+        "
+      />
+      <button
+        onclick="checkAge()"
+        style="
+          background-color: #007bff;
+          color: white;
+          border: none;
+          padding: 10px 20px;
+          border-radius: 5px;
+          cursor: pointer;
+          font-size: 14px;
+        "
+      >
+        Check
+      </button>
+    </div>
+
+    <script>
+      function checkAge() {
+        const age = document.getElementById("age-value").value;
+        if (age > 0 && age < 100) {
+          if (age >= 18) {
+            alert("You are eligible to vote.");
+          } else {
+            alert("You are not eligible to vote.");
+          }
+        } else {
+          alert("Generally age is between 1 and 99.");
+        }
+      }
+    </script>
+  </body>
+</html>

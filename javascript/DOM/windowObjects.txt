@@ -6,8 +6,8 @@ The BOM is a collection of browser-specific objects exposed by the browser envir
 The DOM is a standardized API that takes your HTML code and converts it into a hierarchical tree structure of objects. Every HTML element, attribute, and piece of text becomes a "node" in this tree. To dynamically access, change, add, or delete the content, structure, and styling of a web page.
 
 Element Selectors:
-1.getElementById() - Selects an element by its unique ID.
-2.getElementsByClassName() - Selects elements by their class name.
-3.getElementsByTagName() - Selects elements by their tag name.
-4.querySelector() - Selects the first element that matches a CSS selector.
-5.querySelectorAll() - Selects all elements that match a CSS selector.
+1. getElementById() - Selects an element by its unique ID.
+2. getElementsByClassName() - Selects elements by their class name.
+3. getElementsByTagName() - Selects elements by their tag name.
+4. querySelector() - Selects the first element that matches a CSS selector.
+5. querySelectorAll() - Selects all elements that match a CSS selector.

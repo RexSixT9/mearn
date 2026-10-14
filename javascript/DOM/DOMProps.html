@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- ParentNode: Returns the parent node of an element -->
+    <!-- <div id="parent">
+        <div id="child">Child</div>
+    </div> -->
+
+    <!-- childNodes: Returns the nodelist of an element -->
+    <!-- <ul id="listItems">
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <li>Item 3</li>
+        <li>Item 4</li>
+    </ul> -->
+
+    <!-- innerHTML: Returns the HTML content of an element -->
+    <!-- <div id="elemnt">
+      <p>Web Developer</p>
+    </div> -->
+
+    <!-- textContent: Returns the text content of an element -->
+     <p id="text">MEARN Developer</p>
+
+    <script>
+      // const childElem = document.getElementById("child");
+      // console.log(childElem);
+      // const parentElem = childElem.parentNode;
+      // console.log(parentElem);
+
+      // const listItems = document.getElementById("listItems");
+      // const listItemsChild = listItems.childNodes;
+      // console.log(listItemsChild);
+
+      //   const elem = document.getElementById("elemnt");
+      //   elem.innerHTML = "<h1 style=color:blue>Rex</h1>";
+
+      const textContent = document.getElementById("text");
+      textContent.textContent = "Full Stack Developer";
+
+
+    </script>
+  </body>
+</html>
