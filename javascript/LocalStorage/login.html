@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  </head>
+  <body>
+    <div class="flex min-h-screen items-center justify-center bg-gray-100">
+      <div class="w-80 space-y-4 rounded bg-white p-6">
+        <h2 class="text-2xl font-bold text-center">Login</h2>
+        <label for="uname" class="block font-semibold">Username</label>
+        <input
+          id="uname"
+          type="text"
+          placeholder="Username"
+          class="w-full rounded border p-2"
+        />
+        <label for="passwd" class="block font-semibold">Password</label>
+        <input
+          id="passwd"
+          type="password"
+          placeholder="Password"
+          class="w-full rounded border p-2"
+        />
+        <button
+          onclick="login()"
+          type="submit"
+          class="w-full rounded bg-blue-600 p-2 text-white hover:bg-blue-700"
+        >
+          Login
+        </button>
+      </div>
+    </div>
+    <script src="./script.js"></script>
+  </body>
+</html>

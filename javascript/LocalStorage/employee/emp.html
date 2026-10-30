@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Employee</title>
+
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  </head>
+  <body class="min-h-screen bg-gray-50 text-black">
+    <header class="bg-blue-600 px-6 py-4 text-white">
+      <div class="mx-auto flex max-w-6xl items-center justify-between">
+        <h2 class="text-2xl font-semibold" id="welcome"></h2>
+        <button class="rounded bg-red-600 px-4 py-2 font-medium text-white hover:bg-red-700" onclick="logout()">
+          Logout
+        </button>
+      </div>
+    </header>
+
+    <main class="mx-auto max-w-3xl space-y-5 px-4 py-6">
+      <section class="rounded-lg border border-blue-100 bg-white p-5">
+        <h3 class="mb-5 text-xl font-semibold text-black">
+          Employee Details
+        </h3>
+
+        <div class="grid gap-3 md:grid-cols-2">
+          <input
+            type="text"
+            id="empId"
+            placeholder="Employee ID"
+            class="w-full rounded border border-blue-200 p-2.5 outline-none focus:border-blue-500"
+          />
+          <input
+            type="text"
+            id="empName"
+            placeholder="Employee Name"
+            class="w-full rounded border border-blue-200 p-2.5 outline-none focus:border-blue-500"
+          />
+          <input
+            type="text"
+            id="empEmail"
+            placeholder="Employee Email"
+            class="w-full rounded border border-blue-200 p-2.5 outline-none focus:border-blue-500"
+          />
+          <input
+            type="text"
+            id="empDesig"
+            placeholder="Employee Designation"
+            class="w-full rounded border border-blue-200 p-2.5 outline-none focus:border-blue-500"
+          />
+          <input
+            type="text"
+            id="empExp"
+            placeholder="Employee Experience"
+            class="w-full rounded border border-blue-200 p-2.5 outline-none focus:border-blue-500"
+          />
+          <input
+            type="text"
+            id="empSalary"
+            placeholder="Employee Salary"
+            class="w-full rounded border border-blue-200 p-2.5 outline-none focus:border-blue-500"
+          />
+          <button
+            class="w-full rounded bg-blue-600 p-2.5 font-medium text-white hover:bg-blue-700 md:col-span-2"
+            onclick="addEmployee()"
+          >
+            Add Employee
+          </button>
+        </div>
+      </section>
+
+      <section class="rounded-lg border border-blue-100 bg-white p-5">
+        <h3 class="mb-4 text-xl font-semibold text-black">Search Employees</h3>
+        <div class="flex flex-col gap-3 sm:flex-row">
+          <input
+            type="text"
+            id="searchId"
+            placeholder="Search Employee"
+            class="min-w-0 flex-1 rounded border border-blue-200 p-2.5 outline-none focus:border-blue-500"
+          />
+          <button
+            onclick="search()"
+            class="rounded bg-blue-600 px-5 py-2.5 font-medium text-white hover:bg-blue-700"
+          >
+            Search
+          </button>
+        </div>
+        <div id="result" class="mt-5"></div>
+      </section>
+    </main>
+
+    <script src="emp.js"></script>
+  </body>
+</html>

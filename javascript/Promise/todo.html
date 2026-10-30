@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Api Call Using Promise</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  </head>
+  <body>
+    <h1 class="text-center text-3xl font-semibold py-8">Todo List</h1>
+    <div class="flex justify-center mx-auto">
+      <table class="max-w-full table-auto border border-gray-300">
+        <thead>
+          <tr>
+            <th class="border px-4 py-2">UserId</th>
+            <th class="border px-4 py-2">Id</th>
+            <th class="border px-4 py-2">Title</th>
+            <th class="border px-4 py-2">Completed</th>
+          </tr>
+        </thead>
+        <tbody id="result"></tbody>
+      </table>
+    </div>
+  </body>
+
+  <script>
+    fetch("https://jsonplaceholder.typicode.com/todos")
+      .then((response) => response.json())
+      .then((todos) => displayData(todos))
+      .catch((err) => console.log(err));
+
+    function displayData(todos) {
+      console.log(todos);
+      const result = document.getElementById("result");
+      for (let todo of todos) {
+        const htmlData = `
+            <tr>
+                <td class="border px-4 py-2">${todo.userId}</td>
+                <td class="border px-4 py-2">${todo.id}</td>
+                <td class="border px-4 py-2">${todo.title}</td>
+                <td class="border px-4 py-2">${todo.completed}</td>
+            </tr>
+            `;
+        result.innerHTML += htmlData;
+      }
+    }
+  </script>
+</html>

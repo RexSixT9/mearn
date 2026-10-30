@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>API Call with Ajax</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  </head>
+  <body class="bg-gray-100">
+    <div class="container mx-auto py-8">
+      <h1 class="text-2xl font-bold text-center">Todo List</h1>
+      <div class="flex justify-center mt-4">
+        <div class="bg-white p-4 rounded shadow">
+          <table class="table-auto w-full border border-gray-300">
+            <thead>
+              <tr>
+                <th class="border px-4 py-2">UserId</th>
+                <th class="border px-4 py-2">Id</th>
+                <th class="border px-4 py-2">Title</th>
+                <th class="border px-4 py-2">Completed</th>
+              </tr>
+            </thead>
+            <tbody id="result"></tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script>
+    // Object creation
+    const response = new XMLHttpRequest();
+
+    // API call
+    response.open("GET", "https://jsonplaceholder.typicode.com/todos");
+    // Send the request
+    response.send();
+
+    // Set Onreadystatechange function
+    response.onreadystatechange = () => {
+      if (response.readyState == 4 && response.status == 200) {
+        const data = JSON.parse(response.responseText);
+        displayData(data);
+      }
+    };
+
+    function displayData(data) {
+      const result = document.getElementById("result");
+      for (let todo of data) {
+        htmlData = `
+          <tr>
+            <td class="border px-4 py-2">${todo.userId}</td>
+            <td class="border px-4 py-2">${todo.id}</td>
+            <td class="border px-4 py-2">${todo.title}</td>
+            <td class="border px-4 py-2">${todo.completed}</td>
+          </tr>
+        `;
+        result.innerHTML += htmlData;
+      }
+    }
+
+    // Set Onload function
+  </script>
+</html>

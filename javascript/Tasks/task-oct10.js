@@ -119,7 +119,12 @@ console.log("Balance of account number 1000:", accounts.find((a) => a.acno === 1
 
 //4 print all gpay transactions
 console.log("All gpay transactions:", accounts.map((a) => a.transaction.filter((t) => t.mode === "gpay")));
-
+accounts.forEach((a) => {
+  const gpayTransactions = a.transaction.filter((t) => t.mode === "gpay");
+  if (gpayTransactions.length > 0) {
+    console.log(`Gpay transactions for account ${a.acno}:`, gpayTransactions);
+  }
+});
 //5 print all transactions whose amount > 5000
 console.log("Transactions whose amount is greater than 5000:", accounts.map((a) => a.transaction.filter((t) => t.amount > 5000)));
 
